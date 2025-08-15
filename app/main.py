@@ -19,6 +19,7 @@ def main() -> None:
 		print("[?] Tracking started")
 		while True:
 			player.update()
+			print(f"[+] Player position: {player._position}")
 			mumble_link.update(player._position)
 			time.sleep(0.05)
 	except Exception as e:

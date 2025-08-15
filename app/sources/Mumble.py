@@ -23,7 +23,7 @@ class MumbleLink:
 		self._memfile = mmap.mmap(-1, ctypes.sizeof(LinkedMem), tagname="MumbleLink")
 		self._link = LinkedMem.from_buffer(self._memfile)
 		self._link.uiVersion = 2
-		self._link.name = "League of Legends"
+		self._link.name = "League Proximity"
 		self._link.identity = identity
 		self._link.description = "League of Legends positional audio sender"
 		self._tick = 0

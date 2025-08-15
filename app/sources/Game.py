@@ -1,8 +1,9 @@
 import cv2
-import mss
 import numpy as np
 
-MAP_SIZE = (350, 350)
+from PIL import ImageGrab
+
+MAP_SIZE = (400, 400)
 
 class Player:
 	def __init__(self, champion: str, treshold: float) -> None:
@@ -25,14 +26,12 @@ class Player:
 			self._position = (position_x, position_y)
 
 	def get_map_image(size: tuple) -> np.ndarray:
-		sct = mss.mss()
-		monitor = sct.monitors[1]
-		screen_size = (monitor["width"], monitor["height"])
-		region = {
-			"left": screen_size[0] - size[0],
-			"top": screen_size[1] - size[1],
-			"width": size[0],
-			"height": size[1]
-		}
-		screenshot = sct.grab(region)
-		return np.array(screenshot)
+		screenshot = ImageGrab.grab()
+		screen_width, screen_height = screenshot.size
+		left = screen_width - size[0]
+		top = screen_height - size[1]
+		right = screen_width
+		bottom = screen_height
+		region = screenshot.crop((left, top, right, bottom))
+		result = np.array(region)
+		return result
