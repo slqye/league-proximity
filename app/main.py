@@ -1,3 +1,5 @@
+import time
+
 import sources.Api as api
 import sources.Game as game
 import sources.Mumble as mumble
@@ -18,6 +20,7 @@ def main() -> None:
 		while True:
 			player.update()
 			mumble_link.update(player._position)
+			time.sleep(0.05)
 	except Exception as e:
 		print(f"[!] An error occurred: {e}")
 
