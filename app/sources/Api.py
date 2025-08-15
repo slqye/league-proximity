@@ -8,3 +8,12 @@ class LiveClient:
 	def get(self, endpoint: str) -> str:
 		response = requests.get(self._url + endpoint, verify=self._certificate)
 		return response
+
+	def get_player_champion(self) -> str:
+		players: list = self.get("playerlist").json()
+		riot_id: str = self.get("activeplayername").text.strip("\"")
+
+		for player in players:
+			if player["riotId"] == riot_id:
+				return player["championName"].lower()
+		return None
