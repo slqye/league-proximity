@@ -1,6 +1,6 @@
 ![Banner](assets/banner.png)
 
-Hi! Welcome to **League Proximity**. This software enables proximity chat in **League of Legends**.
+Hi! Welcome to **League Proximity**. This software allow you to have proximity chat in **League of Legends**.
 
 > [!IMPORTANT]
 > I am not sure whether Riot Games allows this kind of software to be used in-game. I am not responsible for any consequences that may occur.
