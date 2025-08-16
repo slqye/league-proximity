@@ -1,7 +1,6 @@
 ![Banner](assets/banner.png)
 
-Hi! Welcome to **League Proximity**.  
-This program enables proximity chat in **League of Legends**.
+Hi! Welcome to **League Proximity**. This program enables proximity chat in **League of Legends**.
 
 > [!NOTE]
 > To run the program from source, you need to have `uv` installed on your system.  
