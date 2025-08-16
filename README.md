@@ -4,15 +4,15 @@ Hi! Welcome to **League Proximity**. This program enables proximity chat in **Le
 
 > [!NOTE]
 > To run the program from source, you need to have `uv` installed on your system.  
-> Installation guide: https://docs.astral.sh/uv/getting-started/installation/
+> https://docs.astral.sh/uv/getting-started/installation/
 
 ## Roadmap
 - ✅ Retrieve summoner champion
 - ✅ Mumble link
 - ✅ GUI
 - 🚧 Retrieve champion position
-- ❌ Integrated Mumble client
-- ❌ Integrated Mumble server for hosting
+- ❌ Integrated Mumble client connection
+- ❌ Integrated Mumble server hosting
 
 ## Usage
 
