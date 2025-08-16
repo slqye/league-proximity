@@ -1,6 +1,8 @@
 import ctypes
 import mmap
 
+import sources.Game as game
+
 class LinkedMem(ctypes.Structure):
 	_fields_ = [
 		("uiVersion", ctypes.c_uint32),
@@ -28,10 +30,10 @@ class MumbleLink:
 		self._link.description = "League of Legends positional audio sender"
 		self._tick = 0
 
-	def update(self, position: tuple) -> None:
+	def update(self, player: game.Player) -> None:
 		self._tick += 1
 		self._link.uiTick = self._tick
-		self._link.fAvatarPosition[:] = (position[0], position[1], 0)
+		self._link.fAvatarPosition[:] = (player._position[0], player._position[1], 0)
 		self._link.fAvatarFront[:] = (1, 0, 0)
 		self._link.fAvatarTop[:] = (0, 0, 1)
 		self._link.fCameraPosition[:] = self._link.fAvatarPosition
