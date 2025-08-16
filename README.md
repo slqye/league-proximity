@@ -5,15 +5,6 @@ Hi! Welcome to **League Proximity**. This program enables proximity chat in **Le
 > [!IMPORTANT]
 > I am not sure whether Riot Games allows this kind of software to be used in-game. I am not responsible for any consequences that may occur.
 
-## Roadmap
-
-- ✅ Retrieve summoner champion
-- ✅ Mumble link
-- ✅ GUI
-- 🚧 Retrieve champion position
-- ❌ Integrated Mumble client connection
-- ❌ Integrated Mumble server hosting
-
 ## Usage
 
 > [!NOTE]
@@ -23,3 +14,12 @@ Hi! Welcome to **League Proximity**. This program enables proximity chat in **Le
 ```bash
 cd ./app/ && uv run main.py
 ```
+
+## Roadmap
+
+- ✅ Retrieve summoner champion
+- ✅ Mumble link
+- ✅ GUI
+- 🚧 Retrieve champion position
+- ❌ Integrated Mumble client connection
+- ❌ Integrated Mumble server hosting
