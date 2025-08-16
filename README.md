@@ -20,6 +20,7 @@ cd ./app/ && uv run main.py
 - ✅ Retrieve summoner champion
 - ✅ Mumble link
 - ✅ GUI
+- 🚧 Retrieve champions icons
 - 🚧 Retrieve champion position
 - ❌ Integrated Mumble client connection
 - ❌ Integrated Mumble server hosting
