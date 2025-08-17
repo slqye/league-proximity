@@ -25,7 +25,6 @@ class Player:
 		if (max_value >= self._treshold):
 			position_x: float = max_location[0] + (self._icon_size / 2)
 			position_y: float = max_location[1] + (self._icon_size / 2)
-			print(f"Position: ({position_x}, {position_y})")
 			self._position = (position_x, position_y)
 
 	def get_map_image(size: tuple) -> np.ndarray:

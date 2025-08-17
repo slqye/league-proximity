@@ -1,5 +1,7 @@
 import tkinter as tk
 import ttkbootstrap as ttk
+import threading
+import time
 
 import sources.Constants as constants
 import sources.Api as api
@@ -18,6 +20,21 @@ class Window:
 		self._player: game.Player = None
 		self._mumble_link: mumble.MumbleLink = None
 		self._toggle_btn: ttk.Button = None
+		self._thread = threading.Thread(target=self.compute)
+		self._threshold = 0.6
+
+	def compute(self) -> None:
+		try:
+			if (self._player is None or self._mumble_link is None):
+				self._player = game.Player(self._live_client.get_player_champion(), self._threshold)
+				self._mumble_link = mumble.MumbleLink(self._player._champion)
+				self.set_icon(self._player._champion)
+		except Exception:
+			time.sleep(1)
+			return
+		print(self._player._position)
+		self._player.update()
+		self._mumble_link.update(self._player)
 
 	def run(self):
 		self._toggle_btn = ttk.Button(
@@ -35,20 +52,13 @@ class Window:
 	def update(self):
 		if not self._is_running:
 			return
-		else:
-			try:
-				if (self._player is None and self._mumble_link is None):
-					print("Connecting to live client...")
-					self._player = game.Player(self._live_client.get_player_champion(), 0.6)
-					self._mumble_link = mumble.MumbleLink(self._player._champion)
-					self.set_icon(self._player._champion)
-				self._player.update()
-				self._mumble_link.update(self._player)
-				self._root.after(25, self.update)
-			except Exception:
-				self._root.after(1000, self.update)
+		if not self._thread.is_alive():
+			self._thread = threading.Thread(target=self.compute)
+			self._thread.start()
+		self._root.after(25, self.update)
 
 	def reset(self):
+		self._thread.join()
 		self._player = None
 		self._mumble_link = None
 		self.set_icon("unknown")
