@@ -37,13 +37,17 @@ class Window:
 		self._mumble_link.update(self._player)
 
 	def run(self):
+		self._root.grid_rowconfigure(0, weight=1)
+		self._root.grid_columnconfigure(0, weight=1)
+		holder = ttk.Label(self._root, text="More soon...")
 		self._toggle_btn = ttk.Button(
 			self._root,
 			text="Enable",
 			bootstyle="primary",
 			command=self.toggle_tracking
 		)
-		self._toggle_btn.pack(padx=10, pady=10, fill=tk.X)
+		holder.grid(row=0, column=0, padx=10, pady=10)
+		self._toggle_btn.grid(row=1, column=0, padx=10, pady=10, sticky="sew")
 		self._root.mainloop()
 
 	def on_close(self):
