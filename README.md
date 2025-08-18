@@ -32,7 +32,3 @@ uv run main.py
 - [x] Mumble link plugin
 - [ ] Integrated Mumble client
 - [ ] Integrated p2p Murmur hosting
-
-## Contributing
-
-I'd appreciate any help! Feel free to contribute by forking the repository, making your changes, and opening a pull request.
