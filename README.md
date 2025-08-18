@@ -20,10 +20,12 @@ uv run main.py
 
 ## Roadmap
 
-- ✅ Retrieve summoner champion
-- ✅ Mumble link
-- ✅ GUI
-- 🚧 Retrieve champions icons
-- 🚧 Retrieve champion position
-- ❌ Integrated Mumble client connection
-- ❌ Integrated Mumble server hosting
+- [x] Retrieve summoner champion
+- [ ] Champion position
+    - [x] Recognise champion icon
+    - [ ] Normalize champion position based on screen and in-game map size
+- [x] Gui
+    - [x] Use threads
+- [x] Mumble link plugin
+- [ ] Integrated Mumble client
+- [ ] Integrated p2p Murmur hosting
