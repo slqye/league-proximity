@@ -12,7 +12,7 @@ Hi! Welcome to **League Proximity**. This software allow you to have proximity c
 > https://docs.astral.sh/uv/getting-started/installation/
 
 > [!NOTE]
-> To enable the software to comunicate the position with the Mumble client you should enable the `Link` plugin in your settings. 
+> To enable the software to communicate its position with the Mumble client, you should activate the `Link` plugin in your settings.
 
 ```bash
 uv run main.py
