@@ -23,7 +23,8 @@ uv run main.py
 - [x] Retrieve summoner champion
 - [ ] Champion position
     - [x] Recognise champion icon
-    - [ ] Normalize champion position based on screen and in-game map size
+    - [x] Calculate champion position 
+    - [ ] Normalize champion position
 - [x] Gui
     - [x] Use threads
 - [x] Mumble link plugin
