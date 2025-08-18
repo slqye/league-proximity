@@ -8,8 +8,11 @@ Hi! Welcome to **League Proximity**. This software allow you to have proximity c
 ## Usage
 
 > [!NOTE]
-> To run the program from source, you need to have `uv` installed on your system.  
+> To run the program from source, you need to have `uv` installed on your system.
 > https://docs.astral.sh/uv/getting-started/installation/
+
+> [!NOTE]
+> To enable the software to comunicate the position with the Mumble client you should enable the `Link` plugin in your settings. 
 
 ```bash
 uv run main.py
