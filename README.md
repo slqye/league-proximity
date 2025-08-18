@@ -29,6 +29,7 @@ uv run main.py
         - [ ] Calculate map to client settings ratio
 - [x] Gui
     - [x] Use threads
+    - [ ] Settings fields
 - [x] Mumble link plugin
 - [ ] Integrated Mumble client
 - [ ] Integrated p2p Murmur hosting
