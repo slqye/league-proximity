@@ -12,7 +12,7 @@ Hi! Welcome to **League Proximity**. This software allow you to have proximity c
 > https://docs.astral.sh/uv/getting-started/installation/
 
 ```bash
-cd ./app/ && uv run main.py
+uv run main.py
 ```
 
 ## Roadmap
