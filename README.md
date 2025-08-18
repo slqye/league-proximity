@@ -3,7 +3,7 @@
 Hi! Welcome to **League Proximity**. This software allow you to have proximity chat in **League of Legends**.
 
 > [!IMPORTANT]
-> I am not sure whether Riot Games allows this kind of software to be used in-game. I am not responsible for any consequences that may occur.
+> After consulting with Riot Games support, it has been determined that the use of this software is not permitted, and doing so may result in a ban. Please note that I am not responsible for any consequences that may arise from its use.
 
 ## Usage
 
