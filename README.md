@@ -25,6 +25,8 @@ uv run main.py
     - [x] Recognise champion icon
     - [x] Calculate champion position 
     - [ ] Normalize champion position
+        - [ ] Calculate map to monitor screen ratio
+        - [ ] Calculate map to client settings ratio
 - [x] Gui
     - [x] Use threads
 - [x] Mumble link plugin
